@@ -6,12 +6,6 @@ clonebotdb = pymongodb.clonebotdb
 clonebotnamedb = mongodb.clonebotnamedb
 
 async def save_assistant(bot_id, string):
-    clonebotdb.update_one(
-        {"bot_id": bot_id},
-        {"$set": {"assistant_string": string}},
-        upsert=True
-    )
-
 async def get_assistant(bot_id):
     data = clonebotdb.find_one({"bot_id": bot_id})
     if data:
