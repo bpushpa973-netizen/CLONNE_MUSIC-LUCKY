@@ -54,15 +54,7 @@ def get_owner_id_from_db(bot_id):
 
 #check premium -------------
 def check_bot_premium(bot_id):
-    bot_details = clonebotdb.find_one({"bot_id": bot_id})
-
-    if bot_details:
-        if bot_details["premium"]:
-            return True 
-        else:
-            return False
-    else:
-        return None
+    return True
 #check premium --------------
 
 """
