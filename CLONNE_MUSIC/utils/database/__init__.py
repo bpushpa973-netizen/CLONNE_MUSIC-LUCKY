@@ -14,6 +14,7 @@ sudoers = db.sudoers
 langdb = db.lang
 votedb = db.votes
 activechatdb = db.activechats
+maintenancedb = db.maintenance
 
 # ===== CMODE =====
 async def get_cmode(chat_id):
@@ -134,3 +135,15 @@ async def remove_active_chat(chat_id):
 async def get_active_chats():
     chats = activechatdb.find()
     return [chat["chat_id"] for chat in chats]
+# ===== MAINTENANCE =====
+
+async def is_maintenance():
+    data = maintenancedb.find_one({"_id": "maintenance"})
+    return data["mode"] if data else False
+
+async def set_maintenance(mode: bool):
+    maintenancedb.update_one(
+        {"_id": "maintenance"},
+        {"$set": {"mode": mode}},
+        upsert=True
+    )
