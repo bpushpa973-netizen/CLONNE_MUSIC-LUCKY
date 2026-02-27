@@ -26,7 +26,7 @@ from CLONNE_MUSIC.utils.database.clonedb import get_owner_id_from_db
 from config import SUPPORT_CHAT, OWNER_ID, BOT_USERNAME, SUPPORT_CHANNEL
 
 from datetime import datetime
-CLONES = {}
+CLONES = set()
 
 C_BOT_DESC = f"Wᴀɴᴛ ᴀ ʙᴏᴛ ʟɪᴋᴇ ᴛʜɪs? Cʟᴏɴᴇ ɪᴛ ɴᴏᴡ! ✅\n\nVɪsɪᴛ: @{BOT_USERNAME} ᴛᴏ ɢᴇᴛ sᴛᴀʀᴛᴇᴅ!\n\n - Uᴘᴅᴀᴛᴇ: [ᴄʟɪᴄᴋ ʜᴇʀᴇ]({SUPPORT_CHAT})\n - Sᴜᴘᴘᴏʀᴛ: [ᴄʟɪᴄᴋ ʜᴇʀᴇ]({SUPPORT_CHANNEL})]"
 
