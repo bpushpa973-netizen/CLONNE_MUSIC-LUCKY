@@ -56,3 +56,27 @@ async def add_sudo(user_id):
 
 async def is_sudo(user_id):
     return sudoers.find_one({"user_id": user_id})
+    
+# ===== AUTH USERS =====
+async def get_authuser(chat_id):
+    return authuser.find_one({"chat_id": chat_id})
+
+async def add_authuser(chat_id, user_id):
+    authuser.update_one(
+        {"chat_id": chat_id},
+        {"$addToSet": {"users": user_id}},
+        upsert=True
+    )
+
+async def get_authuser_names(chat_id):
+    data = authuser.find_one({"chat_id": chat_id})
+    if not data:
+        return []
+    return data.get("names", [])
+
+async def save_authuser_name(chat_id, name):
+    authuser.update_one(
+        {"chat_id": chat_id},
+        {"$addToSet": {"names": name}},
+        upsert=True
+    )
