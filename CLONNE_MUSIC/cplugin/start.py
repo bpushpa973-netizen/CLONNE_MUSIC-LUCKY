@@ -47,17 +47,17 @@ async def start_pm(client, message: Message, _):
     C_BOT_OWNER_ID = get_owner_id_from_db(a.id)
     # await asyncio.sleep(0.2)
     
-    await loading_1.edit_text("<b>sᴛᴀʀᴛɪɴɢ✨</b>")
+    await loading_1.edit_text("<b>ᴘʟᴇᴀsᴇ ᴡᴀɪᴛ ʟᴏᴀᴅɪɴɢ</b>")
     C_BOT_SUPPORT_CHAT = await get_cloned_support_chat(a.id)
     C_SUPPORT_CHAT = f"https://t.me/{C_BOT_SUPPORT_CHAT}"
     # await asyncio.sleep(0.1)
-    await loading_1.edit_text("<b>sᴛᴀʀᴛɪɴɢ✨.</b>")
+    await loading_1.edit_text("<b>ʟᴏᴀᴅɪɴɢ 𝟸𝟶%</b>")
     C_BOT_SUPPORT_CHANNEL = await get_cloned_support_channel(a.id)
     C_SUPPORT_CHANNEL = f"https://t.me/{C_BOT_SUPPORT_CHANNEL}"
     # await asyncio.sleep(0.1)
-    await loading_1.edit_text("<b>sᴛᴀʀᴛɪɴɢ✨..</b>")
+    await loading_1.edit_text("<b>ʟᴏᴀᴅɪɴɢ 𝟻𝟶%</b>")
     await asyncio.sleep(0.1)
-    await loading_1.edit_text("<b>sᴛᴀʀᴛɪɴɢ✨...</b>")
+    await loading_1.edit_text("<b>ʟᴏᴀᴅɪɴɢ 𝟷𝟶𝟶%</b>")
     await asyncio.sleep(0.1)
     await loading_1.delete()
 
