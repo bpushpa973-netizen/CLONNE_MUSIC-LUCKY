@@ -13,6 +13,7 @@ blacklist = db.blacklist
 sudoers = db.sudoers
 langdb = db.lang
 votedb = db.votes
+activechatdb = db.activechats
 
 # ===== CMODE =====
 async def get_cmode(chat_id):
@@ -115,3 +116,21 @@ async def add_downvote(chat_id):
         {"$inc": {"downvotes": 1}},
         upsert=True
     )
+
+# ===== ACTIVE CHAT =====
+async def is_active_chat(chat_id):
+    return activechatdb.find_one({"chat_id": chat_id}) is not None
+
+async def add_active_chat(chat_id):
+    activechatdb.update_one(
+        {"chat_id": chat_id},
+        {"$set": {"chat_id": chat_id}},
+        upsert=True
+    )
+
+async def remove_active_chat(chat_id):
+    activechatdb.delete_one({"chat_id": chat_id})
+
+async def get_active_chats():
+    chats = activechatdb.find()
+    return [chat["chat_id"] for chat in chats]
