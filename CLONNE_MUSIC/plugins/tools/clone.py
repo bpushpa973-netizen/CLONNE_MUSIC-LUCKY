@@ -81,11 +81,8 @@ async def clone_txt(client, message, _):
             await mi.edit_text(_["C_B_H_3"])
             return
         except Exception as e:
-            if "database is locked" in str(e).lower():
-                await message.reply_text(_["C_B_H_4"])
-            else:
-                await mi.edit_text(f"An error occurred: {str(e)}")
-            return
+    await mi.edit_text(f"An error occurred: {str(e)}")
+    return
 
         await mi.edit_text(_["C_B_H_5"])
         try:
@@ -102,8 +99,8 @@ async def clone_txt(client, message, _):
                 "name": bot.first_name,
                 "token": bot_token,
                 "username": bot.username,
-                "channel": "Luckyxupdate",
-                "support": "LuckyXSupport",
+                "channel": "Abhinav_repo",
+                "support": "AbhinavXSupport",
                 "premium" : False,
                 "Date" : False,
             }
