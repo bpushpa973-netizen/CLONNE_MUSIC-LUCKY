@@ -1,8 +1,0 @@
-from .database import *
-from motor.motor_asyncio import AsyncIOMotorClient
-from config import MONGO_DB_URI
-
-mongo = AsyncIOMotorClient(MONGO_DB_URI)
-db = mongo.CLONNE_MUSIC
-
-clonebotdb = db.clonebots
