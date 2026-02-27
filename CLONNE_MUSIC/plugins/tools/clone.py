@@ -80,11 +80,13 @@ async def clone_txt(client, message, _):
         except (AccessTokenExpired, AccessTokenInvalid):
             await mi.edit_text(_["C_B_H_3"])
             return
-    
-        
-        except Exception as e:
-    await mi.edit_text(f"An error occurred: {str(e)}")
-    return
+      try:
+    # yaha tumhara clone wala code hoga
+      some_code()
+
+       except Exception as e:
+          await mi.edit_text(f"An error occurred: {str(e)}")
+          return
 
         await mi.edit_text(_["C_B_H_5"])
         try:
