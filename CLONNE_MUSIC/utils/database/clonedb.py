@@ -20,3 +20,31 @@ async def get_user_clones(user_id):
 
 async def remove_clone(bot_id):
     clonebotdb.delete_one({"bot_id": bot_id})
+
+
+def get_owner_id_from_db(bot_id):
+    data = clonebotdb.find_one({"bot_id": bot_id})
+    if data:
+        return data.get("user_id")
+    return None
+
+
+async def get_cloned_support_chat(bot_id):
+    data = clonebotdb.find_one({"bot_id": bot_id})
+    if data:
+        return data.get("support", "")
+    return ""
+
+
+async def get_cloned_support_channel(bot_id):
+    data = clonebotdb.find_one({"bot_id": bot_id})
+    if data:
+        return data.get("channel", "")
+    return ""
+
+
+def check_bot_premium(bot_id):
+    data = clonebotdb.find_one({"bot_id": bot_id})
+    if data:
+        return data.get("premium", None)
+    return None
