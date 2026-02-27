@@ -80,6 +80,8 @@ async def clone_txt(client, message, _):
         except (AccessTokenExpired, AccessTokenInvalid):
             await mi.edit_text(_["C_B_H_3"])
             return
+      try:
+        
         except Exception as e:
     await mi.edit_text(f"An error occurred: {str(e)}")
     return
@@ -310,8 +312,8 @@ async def list_cloned_bots(client, message, _):
                     owner_profile_link = "#"
 
                 chunk_text += f"**Bᴏᴛ ID:** `{bot.get('bot_id', 'Unknown')}`\n"
-                chunk_text += f"**Bᴏᴛ Nᴀᴍᴇ:** {bot['name']}\n"
-                chunk_text += f"**Bᴏᴛ Usᴇʀɴᴀᴍᴇ:** @{bot['username']}\n"
+                chunk_text += f"**Bᴏᴛ Nᴀᴍᴇ:** {bot.get('name', 'Unknown')}\n"
+                chunk_text += f"**Bᴏᴛ Usᴇʀɴᴀᴍᴇ:** @{bot.get('username', 'Unknown')}\n"
                 chunk_text += f"**Oᴡɴᴇʀ:** [{owner_name}]({owner_profile_link})\n\n"
 
             await message.reply_text(chunk_text)
