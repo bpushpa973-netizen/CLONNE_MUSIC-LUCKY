@@ -34,13 +34,13 @@ async def start_pm(client, message: Message, _):
     loading_1 = await message.reply_text(random.choice(CLONNE))
     await add_served_user(message.from_user.id)
     
-    await loading_1.edit_text("<b>sᴛᴀʀᴛɪɴɢ✨</b>")
+    await loading_1.edit_text("<b>ᴘʟᴇᴀsᴇ ᴡᴀɪᴛ ʟᴏᴀᴅɪɴɢ</b>")
     await asyncio.sleep(0.1)
-    await loading_1.edit_text("<b>sᴛᴀʀᴛɪɴɢ✨.</b>")
+    await loading_1.edit_text("<b>ʟᴏᴀᴅɪɴɢ 𝟸𝟶%</b>")
     await asyncio.sleep(0.1)
-    await loading_1.edit_text("<b>sᴛᴀʀᴛɪɴɢ✨..</b>")
+    await loading_1.edit_text("<b>ʟᴏᴀᴅɪɴɢ 𝟻𝟶%</b>")
     await asyncio.sleep(0.1)
-    await loading_1.edit_text("<b>sᴛᴀʀᴛɪɴɢ✨...</b>")
+    await loading_1.edit_text("<b>ʟᴏᴀᴅɪɴɢ 𝟷𝟶𝟶%</b>")
     await asyncio.sleep(0.1)
     await loading_1.delete()
 
