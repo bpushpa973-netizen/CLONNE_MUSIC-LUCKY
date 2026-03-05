@@ -52,7 +52,6 @@ pyshorteners
 pyttsx3
 pytz
 pytube
-py-tgcalls==0.9.7
 pyyaml==6.0.1
 python-telegram-bot
 qrcode
@@ -75,7 +74,10 @@ youtube-search-python
 flask
 # --- Official Core Libraries ---
 yt-dlp>=2024.11.0
-pyrogram>=2.0.106
+pyrogram==2.0.106
+pytgcalls==3.0.0.dev24
+tgcrypto
+yt-dlp
 TgCrypto  # Isse speed tez hoti hai
 
 # --- Support Libraries ---
