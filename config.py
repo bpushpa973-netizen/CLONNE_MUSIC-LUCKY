@@ -15,9 +15,9 @@ API_HASH = getenv("API_HASH")
 BOT_TOKEN = getenv("BOT_TOKEN")
 BOT_ID = getenv("BOT_ID")
 # -------------------------------------------------------
-OWNER_USERNAME = getenv("OWNER_USERNAME","")
+OWNER_USERNAME = getenv("OWNER_USERNAME","Abhinav_x02")
 # --------------------------------------------------------
-BOT_USERNAME = getenv("BOT_USERNAME" , "CLONNE_MUSIC_BOT")
+BOT_USERNAME = getenv("BOT_USERNAME" , "Clone_Music_robot")
 # --------------------------------------------------------
 BOT_NAME = getenv("BOT_NAME" , "LUCKY")
 # ---------------------------------------------------------
@@ -31,7 +31,7 @@ COOKIES_URL=getenv("COOKIES_URL" , "https://gist.githubusercontent.com/sparrow96
 #---------------------------------------------------------------
 #---------------------------------------------------------------
 MONGO_DB_URI = getenv("MONGO_DB_URI")
-API_KEY = getenv("API_KEY")
+API_KEY = getenv("xbit_yjb819gMTo3xPm09-Y0vHA9hcgGIShPj")
 
 #---------------------------------------------------------------
 #---------------------------------------------------------------
