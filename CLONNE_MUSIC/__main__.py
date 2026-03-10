@@ -3,8 +3,7 @@ import asyncio
 import importlib
 
 from pyrogram import idle
-from pytgcalls.exceptions import NoActiveGroupCall
-
+from pytgcalls.exceptions import NoActiveGroupCallError
 import config
 from CLONNE_MUSIC import LOGGER, app, userbot
 from CLONNE_MUSIC.core.call import LUCKY
