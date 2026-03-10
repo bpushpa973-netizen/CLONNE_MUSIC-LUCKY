@@ -38,7 +38,7 @@ pycryptodome
 pydub
 pyfiglet
 pykeyboard
-git+https://github.com/KurimuzonAkuma/pyrogram.git
+pyrogram==2.0.106
 python-dotenv
 python-whois
 pyrate-limiter==2.10.0
@@ -65,7 +65,7 @@ youtube-search
 youtube-search-python
 flask
 
-# --- Voice Chat Libraries ---
+# Voice Chat / Music
 py-tgcalls==2.1.0
 opencv-python-headless
 ffmpeg-python
