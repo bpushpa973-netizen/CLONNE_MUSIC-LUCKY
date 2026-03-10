@@ -7,7 +7,7 @@ from pyrogram.errors import SessionPasswordNeeded
 
 from config import API_ID, API_HASH, OWNER_ID
 from pyrogram import Client
-from pytgcalls.exceptions import GroupCallNotFound
+from pytgcalls.exceptions import NoActiveGroupCall
 
 from CLONNE_MUSIC.utils.database.clonedb import (
     get_owner_id_from_db,
