@@ -32,7 +32,6 @@ MukeshAPI
 numpy<2.0.0
 ntgcalls==1.1.2
 openai==0.28.0
-opencv-python
 pillow==9.5.0
 psutil
 pickledb
@@ -75,9 +74,11 @@ flask
 # --- Official Core Libraries ---
 yt-dlp>=2024.11.0
 pyrogram==2.0.106
-tgcrypto
 pytgcalls==3.0.0.dev24
+tgcrypto
+opencv-python-headless
 yt-dlp
+ffmpeg-python
 TgCrypto  # Isse speed tez hoti hai
 
 # --- Support Libraries ---
